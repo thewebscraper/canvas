@@ -1,5 +1,6 @@
 #include <QDebug>
 #include <QImage>
+#include <QString>
 
 #include <opencv/cv.h>
 #include <opencv2/highgui/highgui.hpp>
@@ -8,8 +9,10 @@
 
 ImgProc::ImgProc()
 {
-    path = "C:\\Users\\Joseph dela Pena\\Pictures\\DSC02297.JPG";
-    img = cv::imread (path.toStdString());
+    path = ".\\images\\input.jpg";
+    info = new QFileInfo (path);
+    qDebug () << info->absoluteFilePath();
+    img = cv::imread (info->absoluteFilePath().toStdString());
     new_image = img.clone ();
     out_image = cv::Mat::zeros (img.size(), img.type());
 

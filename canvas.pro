@@ -21,7 +21,7 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui
 
-LIBS += -LC:\\OpenCV2.4.10\\opencv\\build\\x64\\vc11\\lib \
+LIBS += -LC:\\OpenCV2.4.10\\opencv\\build\\x86\\vc11\\lib \
     -lopencv_core2410 \
     -lopencv_highgui2410 \
     -lopencv_imgproc2410 \

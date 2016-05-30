@@ -1,6 +1,7 @@
 #ifndef IMGPROC_H
 #define IMGPROC_H
 
+#include <QFileInfo>
 #include <QImage>
 #include <QString>
 
@@ -27,6 +28,8 @@ private:
     QImage get_image (const cv::Mat & img);
 
     QString path;
+    QFileInfo * info;
+
     cv::Mat img;
     cv::Mat new_image;
     cv::Mat out_image;
